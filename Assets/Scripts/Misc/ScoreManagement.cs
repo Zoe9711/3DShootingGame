@@ -20,7 +20,6 @@ public class ScoreManagement : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
         m_CurScore = 0;
     }
     #endregion
@@ -29,11 +28,12 @@ public class ScoreManagement : MonoBehaviour
     public void IncreaseScore(int amount)
     {
         m_CurScore += amount;
-
+        Debug.Log(m_CurScore);
     }
 
     private void UpdateHighScore()
     {
+        
         if (!PlayerPrefs.HasKey("HS"))
         {
             PlayerPrefs.SetInt("HS", m_CurScore);
@@ -52,6 +52,7 @@ public class ScoreManagement : MonoBehaviour
     #region Destruction
     private void OnDisable()
     {
+        Debug.Log($"here {m_CurScore}");
         UpdateHighScore();
     }
 
