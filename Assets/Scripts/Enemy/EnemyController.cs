@@ -72,10 +72,10 @@ public class EnemyController : MonoBehaviour
     #region Main Updates
     private void FixedUpdate()
     {
-        Vector3 dir = cr_Player.position - transform.position;
-        dir.Normalize();
-        cc_Rb.MovePosition(cc_Rb.position + dir * m_Speed * Time.fixedDeltaTime);
-    }
+		Vector3 dir = cr_Player.position - transform.position;
+		dir.Normalize();
+		cc_Rb.MovePosition(cc_Rb.position + dir * m_Speed * Time.fixedDeltaTime);
+	}
 
 
     #endregion

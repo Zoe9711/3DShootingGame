@@ -206,7 +206,7 @@ Animator:
   m_GameObject: {fileID: 4487923617900563357}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 6a190093681125d4fad5b16ea15333d6, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b9fa93dd83cb4e599cfcb6cfbcff685, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -265,7 +265,7 @@ MonoBehaviour:
     m_TriggerName: ShootLaser
     m_AbilityGO: {fileID: 2460057925500967565, guid: aa6a61c0765c3bb4489144fa3d628620,
       type: 3}
-    m_offset: {x: 0.5, y: -0.25, z: 1}
+    m_offset: {x: 0.4, y: 1.1, z: 1}
     m_WindUpTime: 1
     m_FrozenTime: 2.3
     m_Cooldown: 2
@@ -276,9 +276,22 @@ MonoBehaviour:
     m_TriggerName: ShootMegaLaser
     m_AbilityGO: {fileID: 8486783592351315732, guid: 1394129545acecd47a1fc7d35de81c8f,
       type: 3}
-    m_offset: {x: 0.25, y: -0.35, z: 1}
+    m_offset: {x: 0.4, y: 1.2, z: 1}
     m_WindUpTime: 1.5
     m_FrozenTime: 2.3
     m_Cooldown: 2
     m_HealthCost: 1
     m_Color: {r: 0.9529412, g: 0.32941177, b: 0.16078433, a: 0}
+  - m_Name: FireBall
+    m_Button: Fire3
+    m_TriggerName: UseFireBall
+    m_AbilityGO: {fileID: 1352507662906087214, guid: 4d5f09cfcadeb65459f4c8b3083b29ac,
+      type: 3}
+    m_offset: {x: 0.4, y: 1.2, z: 1}
+    m_WindUpTime: 1.5
+    m_FrozenTime: 2.3
+    m_Cooldown: 2
+    m_HealthCost: 5
+    m_Color: {r: 0.9529412, g: 0.7254902, b: 0.16078433, a: 0}
+  m_MaxHealth: 50
+  m_HUD: {fileID: 0}

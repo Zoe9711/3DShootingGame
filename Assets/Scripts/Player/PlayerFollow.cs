@@ -26,10 +26,13 @@ public class PlayerFollow : MonoBehaviour
 
         transform.position = Vector3.Slerp(transform.position, newPos, 1);
 
-        float rotationxAmount = m_RotationSpeed * Input.GetAxis("Mouse X");
-        float rotationyAmount = m_RotationSpeed * Input.GetAxis("Mouse Y");
+        float x = m_RotationSpeed * Input.GetAxis("Mouse X");
+        float y = m_RotationSpeed * Input.GetAxis("Mouse Y");
 
-        transform.RotateAround(m_PlayerTransform.position, Vector3.up, rotationxAmount + rotationyAmount);
+       
+        transform.RotateAround(m_PlayerTransform.position, Vector3.up, x);
+        transform.RotateAround(m_PlayerTransform.position, transform.right, -y);
+
 
         m_Offset = transform.position - m_PlayerTransform.position;
     } 

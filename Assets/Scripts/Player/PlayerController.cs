@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
     [Tooltip("the HUD script")]
     private HUDController m_HUD;
 
-
     #endregion
 
     #region Cached References
@@ -125,6 +124,7 @@ public class PlayerController : MonoBehaviour
         //set how hard the player is pressing movement buttons
         float forward = Input.GetAxis("Vertical");
         float right = Input.GetAxis("Horizontal");
+        
 
         //updating the animation
         cr_Anim.SetFloat("Speed", Mathf.Clamp01(Mathf.Abs(forward) + Mathf.Abs(right)));
@@ -154,7 +154,10 @@ public class PlayerController : MonoBehaviour
 
     }
     private void FixedUpdate()
+
+
     {
+        Debug.Log(m_MaxHealth);
         //update the position of the player
         cc_Rb.MovePosition(cc_Rb.position + m_Speed * Time.fixedDeltaTime * transform.forward * p_Velocity.magnitude);
 
@@ -242,6 +245,27 @@ public class PlayerController : MonoBehaviour
             IncreaseHealth(other.GetComponent<HealthPill>().HealthGain);
             Destroy(other.gameObject);
         }
+
+        //if (other.CompareTag("Grass"))
+        //{
+        //    StartCoroutine(restore(other));
+        //}
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Grass"))
+        {
+            StartCoroutine(restore(other));
+          
+        }
+
+    }
+
+    IEnumerator restore(Collider other)
+    {
+        yield return new WaitForSeconds(2);
+        IncreaseHealth(other.GetComponent<Grass>().HealthGain);
     }
 
     #endregion
