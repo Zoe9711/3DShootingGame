@@ -105,6 +105,8 @@ GameObject:
   - component: {fileID: 2474579736115800158}
   - component: {fileID: 405140711033331069}
   - component: {fileID: 563388104338762744}
+  - component: {fileID: 2395688722627537553}
+  - component: {fileID: -7011224102917778527}
   m_Layer: 10
   m_Name: Toon Chicken
   m_TagString: Chicken
@@ -177,7 +179,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.46
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &563388104338762744
 MonoBehaviour:
@@ -193,9 +195,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Damage: 10
   m_MaxHealth: 20
-  m_Speed: 5
   m_Grass: {fileID: 5570058112352323233, guid: a287cdaf3a6f24abda6527b3f6795299, type: 3}
-  m_TriggerName: 
+--- !u!143 &2395688722627537553
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6336706134927859731}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7011224102917778527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6336706134927859731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db66b2c0335746ab9387354bad201b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Speed: 2
+  m_dirChangeInterval: 5
+  m_RotSpeed: 5
+  m_TriggerName: Walk
 --- !u!1 &6336724129082725177
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,13 +747,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6338695759000580511}
-  m_LocalRotation: {x: 0.50000006, y: -0.50000006, z: -0.49999997, w: 0.49999997}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0.054115757, y: -0.00000000378634, z: -0.0155746825}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6339769091994527005}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90.00001}
 --- !u!1 &6338700120326093279
 GameObject:
   m_ObjectHideFlags: 0

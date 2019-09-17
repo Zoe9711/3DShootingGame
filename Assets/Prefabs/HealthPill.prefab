@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 1770159015252961111}
   - component: {fileID: 456366603447890634}
   - component: {fileID: 1991643685120082013}
+  - component: {fileID: 1292721506475213960}
   m_Layer: 0
   m_Name: HealthPill
   m_TagString: HealthPill
@@ -149,3 +150,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b72a08aa631414d9c74d99f3de280d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1292721506475213960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3974075436137754086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13c2c30395f94845b95f7ea864b2376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TimeToDestruction: 10

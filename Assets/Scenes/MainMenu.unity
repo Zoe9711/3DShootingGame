@@ -148,7 +148,7 @@ RectTransform:
   m_GameObject: {fileID: 5887260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.17, z: 1}
   m_Children:
   - {fileID: 315979847}
   m_Father: {fileID: 1296009379}
@@ -156,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166.2, y: -37.1}
-  m_SizeDelta: {x: 260, y: 45}
+  m_AnchoredPosition: {x: 166.2, y: 57.4}
+  m_SizeDelta: {x: 260.74, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5887262
 MonoBehaviour:
@@ -279,7 +279,7 @@ RectTransform:
   m_GameObject: {fileID: 315979846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.88, y: 0.78, z: 0.7}
   m_Children: []
   m_Father: {fileID: 5887261}
   m_RootOrder: 0
@@ -311,10 +311,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 353149940}
   - component: {fileID: 353149939}
   m_Layer: 5
-  m_Name: AttackGuide
+  m_Name: UserGuide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -449,15 +449,15 @@ RectTransform:
   m_GameObject: {fileID: 353149937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1296009379}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.1, y: -45.4}
-  m_SizeDelta: {x: 280.8, y: 61}
+  m_AnchoredPosition: {x: 87.1, y: -40.9}
+  m_SizeDelta: {x: 697.6, y: 164.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353149939
 MonoBehaviour:
@@ -481,7 +481,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 1
@@ -492,16 +492,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'WASD for movement
-
-
-    F for laser
-
-
-    G for megalaser
-
-
-    C for fireball'
+  m_Text: "WASD for movement\nF - Laser\nG - Megalaser\nC - Fireball \n-Chickens are
+    invulnerable to laser \nand it takes two Fireballs to kill a chicken\n-Kill Ghostenemies
+    for Healthpills \n-Kill Chickens for Grass which exists for \n20 seconds and provides
+    8 Health every 2\nseconds while the player is in contact"
 --- !u!222 &353149940
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -537,7 +531,7 @@ RectTransform:
   m_GameObject: {fileID: 812225254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.88, y: 0.87, z: 1}
   m_Children: []
   m_Father: {fileID: 2071119969}
   m_RootOrder: 0
@@ -932,8 +926,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 141.8, y: 50}
-  m_SizeDelta: {x: 210, y: 100}
+  m_AnchoredPosition: {x: 141.8, y: 103.6}
+  m_SizeDelta: {x: 133.9, y: 44.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1291793203
 MonoBehaviour:
@@ -1181,7 +1175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 89.1, y: -99.3}
+  m_AnchoredPosition: {x: 89.1, y: 14}
   m_SizeDelta: {x: 105, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071119970

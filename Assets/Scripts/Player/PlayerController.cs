@@ -52,10 +52,17 @@ public class PlayerController : MonoBehaviour
 
     //current amount of health that the player has
     private float p_CurHealth;
+
+    //if the player is in touch with the grass
+    private bool trig;
+
+    //if the restore coroutine has started
+    private bool isStarted;
+
     #endregion
 
     #region Initialization
-    
+
     private void Awake()
     {
         p_Velocity = Vector2.zero;
@@ -89,6 +96,14 @@ public class PlayerController : MonoBehaviour
     #region Main Updates
     private void Update()
     {
+
+        if (trig && !isStarted)
+        {
+            StartCoroutine(restore());
+            isStarted = true;
+        }
+
+
 
         if (p_FrozenTimer > 0)
         {
@@ -197,6 +212,15 @@ public class PlayerController : MonoBehaviour
         }
         m_HUD.UpdateHealth(1.0f * p_CurHealth / m_MaxHealth);
     }
+
+    private IEnumerator restore()
+    {
+        while (trig)
+        {
+            IncreaseHealth(8);
+            yield return new WaitForSeconds(2);
+        }
+    }
     #endregion
 
     #region Attack Methods
@@ -246,27 +270,39 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+        if (other.CompareTag("Grass"))
+        {
+            trig = true;
+        }
+
         //if (other.CompareTag("Grass"))
         //{
         //    StartCoroutine(restore(other));
         //}
     }
 
-    private void OnTriggerStay(Collider other)
+
+
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Grass"))
         {
-            StartCoroutine(restore(other));
-          
+            trig = false;
+            isStarted = false;
         }
-
     }
 
-    IEnumerator restore(Collider other)
-    {
-        yield return new WaitForSeconds(2);
-        IncreaseHealth(other.GetComponent<Grass>().HealthGain);
-    }
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.CompareTag("Grass"))
+    //    {
+    //        StartCoroutine(restore(other));
+
+    //    }
+
+    //}
+
+    
 
     #endregion
 }

@@ -17,9 +17,9 @@ public class ChickenController : MonoBehaviour
     [Tooltip("how much health this chicken has")]
     private int m_MaxHealth;
 
-    [SerializeField]
-    [Tooltip("how fast the chicken can move")]
-    private float m_Speed;
+    //[SerializeField]
+    //[Tooltip("how fast the chicken can move")]
+    //private float m_Speed;
 
     [SerializeField]
     [Tooltip("it drops grass")]
@@ -29,70 +29,85 @@ public class ChickenController : MonoBehaviour
 
     #region Private Variables
     private float p_curHealth;
-
+	//private float heading;
+	//private Vector3 targetRotation;
+	//private float directionChangeInterval = 1;
+	//private float maxHeadingChange = 30;
 
     #endregion
 
     #region Cached Components
     private Rigidbody cc_Rb;
-
+    //private CharacterController controller;
     #endregion
 
 
     #region Cached References
     private Transform cr_Player;
 
-    #endregion
+	#endregion
 
-    #region Initialization
+	#region Initialization
 
-    private void Awake()
+	private void Awake()
     {
         p_curHealth = m_MaxHealth;
         cc_Rb = GetComponent<Rigidbody>();
 
-    }
+	}
 
-    private void Start()
-    {
-        //cr_Player = FindObjectOfType<PlayerController>().transform;
-
-        StartCoroutine(randomMove());
-
-    }
-
-    #endregion
+	private void Start()
+	{
+		//cr_Player = FindObjectOfType<PlayerController>().transform;
+		//StartCoroutine(randomMove());
+	}
 
 
-    #region Main Updates
 
-    //private void FixedUpdate()
-    //{
-    //    Vector3 dir = cr_Player.position - transform.position;
-    //    dir.Normalize();
-    //    cc_Rb.MovePosition(cc_Rb.position + dir * m_Speed * Time.fixedDeltaTime);
-    //}
-
-    private IEnumerator randomMove()
-    {
-        yield return new WaitForSeconds(3);
-        Vector3 dir = RandomVector(0, 100);
-        dir.Normalize();
-        cc_Rb.MovePosition(cc_Rb.position + dir * m_Speed * Time.fixedDeltaTime);
-    }
-
-    private Vector3 RandomVector(float min, float max)
-    {
-        var x = Random.Range(min, max);
-        var z = Random.Range(min, max);
-        return new Vector3(x, 0, z);
-    }
-
-    #endregion
+	#endregion
 
 
-    #region Collision Methods
-    private void OnCollisionEnter(Collision collision)
+	#region Main Updates
+
+
+
+	//private void FixedUpdate()
+	//{
+	//    Vector3 dir = cr_Player.position - transform.position;
+	//    dir.Normalize();
+	//    cc_Rb.MovePosition(cc_Rb.position + dir * m_Speed * Time.fixedDeltaTime);
+	//}
+
+	//private IEnumerator randomMove()
+	//{
+        //while (true)
+		//{
+		//	yield return new WaitForSeconds(3);
+		//	Vector3 dir = RandomVector(0, 100);
+		//	dir.Normalize();
+		//	cc_Rb.MovePosition(cc_Rb.position + dir * m_Speed * Time.fixedDeltaTime);
+		//	i++;
+		//}
+
+
+	//}
+
+
+
+	//private Vector3 RandomVector(float min, float max)
+	//{
+	//	var x = Random.Range(min, max);
+	//	var z = Random.Range(min, max);
+	//	return new Vector3(x, 0, z);
+	//}
+
+
+
+	#endregion
+
+
+	#region Collision Methods
+	private void OnCollisionEnter(Collision collision)
     {
         GameObject other = collision.collider.gameObject;
         if (other.CompareTag("Player"))
