@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
     //if the restore coroutine has started
     private bool isStarted;
 
+
     #endregion
 
     #region Initialization
@@ -226,7 +227,6 @@ public class PlayerController : MonoBehaviour
     #region Attack Methods
     private IEnumerator UseAttack(PlayerAttackInfo attack)
     {
-
         cc_Rb.rotation = Quaternion.Euler(0, m_CameraTransform.eulerAngles.y, 0);
         cr_Anim.SetTrigger(attack.TriggerName);
         IEnumerator toColor = ChangeColor(attack.AbilityColor, 10);

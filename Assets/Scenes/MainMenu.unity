@@ -494,8 +494,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "WASD for movement\nF - Laser\nG - Megalaser\nC - Fireball \n-Chickens are
     invulnerable to laser \nand it takes two Fireballs to kill a chicken\n-Kill Ghostenemies
-    for Healthpills \n-Kill Chickens for Grass which exists for \n20 seconds and provides
-    8 Health every 2\nseconds while the player is in contact"
+    for Healthpills \n-Kill Chickens for Chicken which exists for \n20 seconds and
+    provides 8 Health every 2\nseconds while the player is in contact"
 --- !u!222 &353149940
 CanvasRenderer:
   m_ObjectHideFlags: 0

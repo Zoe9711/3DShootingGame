@@ -11,6 +11,7 @@ public class MegaLaserAttack : Ability
         {
             if (hit.collider.CompareTag("Enemy"))
             {
+
                 hit.collider.GetComponent<EnemyController>().DecreaseHealth(m_Info.Power);
             }
         }

@@ -104,9 +104,9 @@ GameObject:
   - component: {fileID: 6242257212375997231}
   - component: {fileID: 2474579736115800158}
   - component: {fileID: 405140711033331069}
-  - component: {fileID: 563388104338762744}
   - component: {fileID: 2395688722627537553}
   - component: {fileID: -7011224102917778527}
+  - component: {fileID: 9030435569124475558}
   m_Layer: 10
   m_Name: Toon Chicken
   m_TagString: Chicken
@@ -181,21 +181,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.46
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &563388104338762744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6336706134927859731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00cdb04aa9c314196aa7a2c52069182c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Damage: 10
-  m_MaxHealth: 20
-  m_Grass: {fileID: 5570058112352323233, guid: a287cdaf3a6f24abda6527b3f6795299, type: 3}
 --- !u!143 &2395688722627537553
 CharacterController:
   m_ObjectHideFlags: 0
@@ -230,6 +215,22 @@ MonoBehaviour:
   m_dirChangeInterval: 5
   m_RotSpeed: 5
   m_TriggerName: Walk
+--- !u!114 &9030435569124475558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6336706134927859731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cdb04aa9c314196aa7a2c52069182c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Damage: 10
+  m_MaxHealth: 20
+  m_chickenThigh: {fileID: 5913478598096384990, guid: b97388449db4b417099529c3348546c8,
+    type: 3}
 --- !u!1 &6336724129082725177
 GameObject:
   m_ObjectHideFlags: 0

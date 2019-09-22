@@ -22,8 +22,8 @@ public class ChickenController : MonoBehaviour
     //private float m_Speed;
 
     [SerializeField]
-    [Tooltip("it drops grass")]
-    private GameObject m_Grass;
+    [Tooltip("it's roasted")]
+    private GameObject m_chickenThigh;
 
     #endregion
 
@@ -126,7 +126,7 @@ public class ChickenController : MonoBehaviour
         {
 
             
-            Instantiate(m_Grass, transform.position, Quaternion.identity);
+            Instantiate(m_chickenThigh, transform.position, Quaternion.identity);
             
 
             Destroy(gameObject);

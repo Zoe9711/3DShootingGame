@@ -6,6 +6,8 @@ public class LaserAttack : Ability
 {
     public override void Use(Vector3 spawnPos)
     {
+        CameraShake.Shake(100f, 100f);
+
         RaycastHit hit;
         float newLength = m_Info.Range;
         if (Physics.SphereCast(spawnPos, 0.5f, transform.forward, out hit, m_Info.Range))
